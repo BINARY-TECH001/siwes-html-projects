@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .user{
+        height: 50vh;
+        display: grid;
+        place-items: center;
+        color:red;
+        font-size: 50px;
+
+    }
+    body{
+       height: 50px;
+        display: grid;
+        place-items: center;
+        background-image: url("./asset/530363.jpg");
+        background-size: cover;
+    }
+    .input{
+        height: 40px;
+        width: 500px;
+        font-size: 15px;
+    }
+    .butt{
+        width: 300px;
+    }
+    
+</style>
+<body>
+    <section class="user">
+            <h3>ADEMOLA GUESS</h3>
+    </section>        
+        <input class="input" type="text" placeholder="GUESS A WORD" id="word"><br>
+        <button class="butt" type="button" id="ok">GUESS</button>
+        <p style="color: rgb(77, 212, 14); font-size: 20px ;">hint: a-----a</p>
+</body>
+<script>
+    alert("welcome to ADEMOLA GUESS")
+    let guessWord = document.getElementById("word");
+    
+    let btn = document.getElementById("ok");
+
+    let correct_word= ["ademola","mubarak","house","school"];
+
+    btn.addEventListener("click",checkInput);
+
+    function checkInput(){
+
+        if ( correct_word.indexOf(guessWord.value) >-1 ){
+            alert("you are correct pal !!!");
+        }else{
+            alert("Wrong!!! Try Again");
+        }
+    }
+</script>
+</html>
